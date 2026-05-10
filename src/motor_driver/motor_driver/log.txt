@@ -1,0 +1,6898 @@
+## First Successful Run
+
+Goal accepted with ID: f47b1ccd0ed54856bf284f4146a19ed2
+
+Feedback:
+    current_pos:
+  x: 0.0
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.0
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.01215649094783613
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.026339063720311615
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.030391227369590323
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.03241730919422968
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.04659988196670516
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.06280853656382
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.08712151845949226
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.11346058217980387
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.15195613684795162
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.19652993699001742
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.25123414625528
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.30391227369590323
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.3606425647858052
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.42345110134962516
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.48828571973808454
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.5551464199511833
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.6240332019889213
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.6989982295005774
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.7800415024861517
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.8610847754717259
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.9137629029123491
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.9583367030544149
+  y: 0.0
+current_velocity: 0.0
+
+Feedback:
+    current_pos:
+  x: 0.998858339547202
+  y: 0.0
+current_velocity: 0.0
+
+Result:
+    success: true
+final_pos:
+  x: 0.998858339547202
+  y: 0.0
+final_time: 0.0
+
+Goal finished with status: SUCCEEDED
+
+----
+
+leek@Omar:~/wheelchair_ws$ ros2 action send_goal /moveto wheelchair_interfaces/action/MoveTo "{desired_pos: {x: 1.0, y: 0.0}, desired_velocity: 0.3}" --feedback
+Waiting for an action server to become available...
+Sending goal:
+     desired_pos:
+  x: 1.0
+  y: 0.0
+desired_velocity: 0.3
+
+Goal accepted with ID: ca62abb4622d4971bd8daeaa42b074f4
+
+Feedback:
+    current_pos:
+  x: 0.0
+  y: 0.0
+current_velocity: 0.0
+m1_encoder_count: 6
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.0
+  y: 0.0
+current_velocity: 0.0
+m1_encoder_count: 6
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.002026081824639355
+  y: 0.0
+current_velocity: 0.015592994643103425
+m1_encoder_count: 7
+m2_encoder_count: -135
+
+Feedback:
+    current_pos:
+  x: 0.002026081824639355
+  y: 0.0
+current_velocity: 0.010952386733191424
+m1_encoder_count: 7
+m2_encoder_count: -134
+
+Feedback:
+    current_pos:
+  x: 0.006078245473918065
+  y: 0.0
+current_velocity: 0.025331949323071652
+m1_encoder_count: 9
+m2_encoder_count: -133
+
+Feedback:
+    current_pos:
+  x: 0.010130409123196776
+  y: 0.0
+current_velocity: 0.03414391968442011
+m1_encoder_count: 11
+m2_encoder_count: -131
+
+Feedback:
+    current_pos:
+  x: 0.018234736421754195
+  y: 0.0
+current_velocity: 0.05188228070598181
+m1_encoder_count: 15
+m2_encoder_count: -129
+
+Feedback:
+    current_pos:
+  x: 0.028365145544950968
+  y: 0.0
+current_velocity: 0.06975399471067072
+m1_encoder_count: 20
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.0405216364927871
+  y: 0.0
+current_velocity: 0.08746666025201187
+m1_encoder_count: 26
+m2_encoder_count: -122
+
+Feedback:
+    current_pos:
+  x: 0.056730291089901935
+  y: 0.0
+current_velocity: 0.10948461721211346
+m1_encoder_count: 34
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.07293894568701678
+  y: 0.0
+current_velocity: 0.12727132620444204
+m1_encoder_count: 42
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.09319976393341033
+  y: 0.0
+current_velocity: 0.1484246082727732
+m1_encoder_count: 52
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.11346058217980387
+  y: 0.0
+current_velocity: 0.16652768297791185
+m1_encoder_count: 62
+m2_encoder_count: -98
+
+Feedback:
+    current_pos:
+  x: 0.13574748225083677
+  y: 0.0
+current_velocity: 0.18469288747539273
+m1_encoder_count: 73
+m2_encoder_count: -92
+
+Feedback:
+    current_pos:
+  x: 0.1620865459711484
+  y: 0.0
+current_velocity: 0.20522317723288216
+m1_encoder_count: 86
+m2_encoder_count: -85
+
+Feedback:
+    current_pos:
+  x: 0.19045169151609936
+  y: 0.0
+current_velocity: 0.22549187011217975
+m1_encoder_count: 100
+m2_encoder_count: -78
+
+Feedback:
+    current_pos:
+  x: 0.21881683706105035
+  y: 0.0
+current_velocity: 0.24363866399124903
+m1_encoder_count: 114
+m2_encoder_count: -71
+
+Feedback:
+    current_pos:
+  x: 0.2471819826060013
+  y: 0.0
+current_velocity: 0.25934980127263185
+m1_encoder_count: 128
+m2_encoder_count: -64
+
+Feedback:
+    current_pos:
+  x: 0.28162537362487033
+  y: 0.0
+current_velocity: 0.2793129478740775
+m1_encoder_count: 145
+m2_encoder_count: -58
+
+Feedback:
+    current_pos:
+  x: 0.3140426828191
+  y: 0.0
+current_velocity: 0.29539678852455226
+m1_encoder_count: 161
+m2_encoder_count: -53
+
+Feedback:
+    current_pos:
+  x: 0.34848607383796903
+  y: 0.0
+current_velocity: 0.31173641103211563
+m1_encoder_count: 178
+m2_encoder_count: -48
+
+Feedback:
+    current_pos:
+  x: 0.38495554668147747
+  y: 0.0
+current_velocity: 0.3281460032714877
+m1_encoder_count: 196
+m2_encoder_count: -45
+
+Feedback:
+    current_pos:
+  x: 0.42345110134962516
+  y: 0.0
+current_velocity: 0.3448808550345182
+m1_encoder_count: 215
+m2_encoder_count: -44
+
+Feedback:
+    current_pos:
+  x: 0.4639727378424123
+  y: 0.0
+current_velocity: 0.36205059301840536
+m1_encoder_count: 235
+m2_encoder_count: -44
+
+Feedback:
+    current_pos:
+  x: 0.5065204561598388
+  y: 0.0
+current_velocity: 0.37905301817253606
+m1_encoder_count: 256
+m2_encoder_count: -46
+
+Feedback:
+    current_pos:
+  x: 0.5571725017758226
+  y: 0.0
+current_velocity: 0.3998922239966143
+m1_encoder_count: 281
+m2_encoder_count: -50
+
+Feedback:
+    current_pos:
+  x: 0.6098506292164458
+  y: 0.0
+current_velocity: 0.4212373144980553
+m1_encoder_count: 307
+m2_encoder_count: -56
+
+Feedback:
+    current_pos:
+  x: 0.6665809203063477
+  y: 0.0
+current_velocity: 0.44352624496361903
+m1_encoder_count: 335
+m2_encoder_count: -65
+
+Feedback:
+    current_pos:
+  x: 0.7395198659933646
+  y: 0.0
+current_velocity: 0.4747441759626493
+m1_encoder_count: 371
+m2_encoder_count: -76
+
+Feedback:
+    current_pos:
+  x: 0.8003023207325453
+  y: 0.0
+current_velocity: 0.4961940595220852
+m1_encoder_count: 401
+m2_encoder_count: -86
+
+Feedback:
+    current_pos:
+  x: 0.8469022026992503
+  y: 0.0
+current_velocity: 0.5077860908209936
+m1_encoder_count: 424
+m2_encoder_count: -94
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4904054539302726
+m1_encoder_count: 423
+m2_encoder_count: -103
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4752791019275579
+m1_encoder_count: 423
+m2_encoder_count: -110
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4609723291698813
+m1_encoder_count: 423
+m2_encoder_count: -115
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4475445469024544
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4348745251344765
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.42299438180232946
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.41163713345113495
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.4009497085070866
+m1_encoder_count: 423
+m2_encoder_count: -115
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.39067195821263845
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3810747232165005
+m1_encoder_count: 423
+m2_encoder_count: -112
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3717424107264636
+m1_encoder_count: 423
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3630174579807823
+m1_encoder_count: 423
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3545954966958224
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3466445402296857
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3389775559034168
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.33170107094261764
+m1_encoder_count: 423
+m2_encoder_count: -112
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.32488514494266973
+m1_encoder_count: 423
+m2_encoder_count: -112
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.3183166747079923
+m1_encoder_count: 423
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.31188652014394813
+m1_encoder_count: 423
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.305701263662437
+m1_encoder_count: 423
+m2_encoder_count: -110
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.29972728309646324
+m1_encoder_count: 423
+m2_encoder_count: -110
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2940305312450658
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2886469618050073
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.28331489195164294
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2782207523356528
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.27323926634745727
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.26850005062315396
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.263860103147773
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2594123583340885
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.25508513412131806
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.25093087535137387
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2468574885084109
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.242883254081745
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.23910788891974774
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.23543083250018534
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.23192320983604378
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.22854755423266726
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.22519499615837382
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2219642504405631
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2187826004739346
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.21573689596749107
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.21282608064524147
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.20989301133710395
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2070758507977428
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.20433071899215183
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.2015564822966369
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.19896824713990438
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1964905487919054
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.19385888710540938
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.19146251302525075
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1890930497586498
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.18680356436079795
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1845478433434651
+m1_encoder_count: 423
+m2_encoder_count: -105
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.18236656514708216
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.18021419346898937
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.17814967764123701
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.17609194839670644
+m1_encoder_count: 423
+m2_encoder_count: -106
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.17410141645314176
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.17214438424817816
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.17025144538773346
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.16837783423427644
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.16656357577871236
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.16476568786418053
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.16302662495313722
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1613066560940446
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.15963812368239882
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.15799108423324823
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1563345862491044
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.15476183647717173
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.15321822810329247
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.15171229499705854
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1502246187123521
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.14877324275844578
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.14733573646065926
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1459489267956733
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.14457024629895696
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.14317112441461272
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1418183862018148
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.14053032777377608
+m1_encoder_count: 423
+m2_encoder_count: -107
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.13925142214755665
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.13800242980432678
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1367727767395327
+m1_encoder_count: 423
+m2_encoder_count: -108
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.13556614287279023
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1343825945598609
+m1_encoder_count: 423
+m2_encoder_count: -109
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1332215440705118
+m1_encoder_count: 423
+m2_encoder_count: -110
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.13210922244576828
+m1_encoder_count: 423
+m2_encoder_count: -110
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.13098046433675373
+m1_encoder_count: 423
+m2_encoder_count: -111
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12987030400219018
+m1_encoder_count: 423
+m2_encoder_count: -112
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12878580331576356
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12772153873199174
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1266900215015563
+m1_encoder_count: 423
+m2_encoder_count: -114
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12565972573602213
+m1_encoder_count: 423
+m2_encoder_count: -115
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12463686054216937
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12363696311758894
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12265432523036529
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12168034674792204
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.12068439076293412
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11975721294692071
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11883049570962108
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11792064795044119
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11702139186053184
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11611020703818262
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11524494150623192
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1143812636035591
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11354106008101378
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11272794713963875
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11190728993953124
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.1110973779420759
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.11030361434909836
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10952146443666466
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10874162085234992
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10797672143633329
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10722278116708277
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10648446858465904
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10574760760548813
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10502747566951769
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10433604896285634
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10363307141749865
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10291568304477997
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10223487939960846
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10155482168468939
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10089102160239627
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.10023041125288705
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09956131822700302
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09892291295483228
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09830798915269273
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09768418764100341
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09706952864772292
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09645729932700536
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09585822300346325
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09526155024167705
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09467880512658243
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09409659705695436
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09352301407221415
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09295687587497811
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09240042303009866
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09180893530827981
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0912712976940645
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09074605067093607
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.09021217348592489
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08966842538339914
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0891496940072373
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08863577317685899
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08812938171737127
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08764210839503837
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08714300870804795
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08663250973306512
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08615220730228955
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08566793334214277
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08517997360137819
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0847140490215424
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08424659044398183
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08379023200264515
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08334733546565758
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08289783051210634
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08245525763479597
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08201436482357027
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08158029692352735
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08114770425075696
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08072255721719726
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.08029988363746304
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07986968257200674
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07945752029752301
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07904807315602162
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0786453737153649
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.078243448040973
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0778478129458862
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07746725011665911
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07707838649903846
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07669534851132367
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07631180747009805
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07593793014033341
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07556291832352571
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07519214687855993
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0748256792945351
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07446547744445413
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07411622763527353
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0737603195686485
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0734080333330544
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07305842731860251
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07271538050865634
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07237060190013095
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07203160678843427
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07169441078858453
+m1_encoder_count: 423
+m2_encoder_count: -120
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07136347628522074
+m1_encoder_count: 423
+m2_encoder_count: -120
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07103158725650285
+m1_encoder_count: 423
+m2_encoder_count: -120
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.070694773812229
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07037166933778494
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.07005188018611655
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06973398995075997
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06942776388217037
+m1_encoder_count: 423
+m2_encoder_count: -122
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.069115933627727
+m1_encoder_count: 423
+m2_encoder_count: -122
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06880797181309124
+m1_encoder_count: 423
+m2_encoder_count: -122
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06849907234907972
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0681965022206109
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06787595239836398
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06757922773638352
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06728188453876142
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06698983769578984
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0666980247666674
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0664091181471139
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06611666934761648
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0658326358946426
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06553419675477483
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06525607229704077
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.064980153597624
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06470664376950903
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06443752472417164
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06417640680062793
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06390804170254229
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06364422375285404
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06338050965527232
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06312096719803995
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06283915833914634
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06258312775551139
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.062329607360449624
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06207660342349865
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.061828849796106485
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06158004911342877
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06133337898308653
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0610903475858719
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.060849110102013514
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06060793094923893
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06037018681593591
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.06013465350935947
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05990156379877914
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.059674522039043214
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05944380166974898
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.059215842705046984
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05898686191831405
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.058761879635985385
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0585375339042995
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05831567126059396
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05809504058664249
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0578773907721718
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05766510625174104
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.057450147099267955
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0572291949886364
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.057018986927529415
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05680708571412442
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.056598931249827546
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05639012661563649
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.056178114257436476
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.055974069014095074
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.055770076930522196
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05556765427878995
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05536781684466905
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.055169863345786156
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05497208268823701
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.054776510346140075
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05458745819011574
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.054394731707506826
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05420208267266264
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05401189996289225
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05382311887441725
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05363534030847298
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05344944679279963
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0532697218188245
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05308259161690515
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05290231567054121
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05272655920333665
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05254609205351075
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05236836918815307
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.052194769306883645
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05201714088400385
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.051843540761265565
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.051673422775572714
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.051500166248417745
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05132224599282985
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05115233428083888
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05098199761712321
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0508137218464574
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05064612634086091
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05048004137566287
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05031004853209765
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.05014570496094915
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04998247252413009
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04982033751507201
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04965463314584963
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04949544041364423
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.049340852746321225
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04918291502457922
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04902622994266057
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04887001604150072
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04871535503510957
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.048559037624026934
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04840362814260983
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04825233720203911
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04810482577743574
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04795526180608445
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.047806510480190516
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04765755301569735
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0475110284238064
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04736383255367852
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04721819995396967
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.047073814353582766
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+^CCanceling goal...
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04693070451118362
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.046787284512540064
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04664644353228025
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.046508456177895674
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04636801536005947
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.046229497151350565
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04609409278439901
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04595640054871357
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0458198089954729
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04568247623136494
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04554787531891257
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04541291152919117
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04527928728570737
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04514622600658957
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04501014318550806
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.044878535395952414
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+^CCanceling goal...
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04474822674532964
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.044618580973534806
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04448902344416355
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04436044140698175
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.044233119189221716
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04410598849725531
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.043983924666257904
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0438584033577443
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04373325284406584
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0436094401516709
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04348222434272434
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.043355450418892785
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.043234174557467066
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04311228884968463
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04299206026242164
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.042871788733987524
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04275372259168818
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04263845731813886
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.042520186559031135
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.042403122804433334
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04228934131612545
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04217329543567358
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04205866808730926
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.041942725294633644
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04182545718268424
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04171240955500167
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04160273882621825
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04149042872233351
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.041378591766241486
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04127081774146243
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.041160219868699645
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04105061671253767
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04094080578518787
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04083221229212221
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04072397050498756
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04061616941933827
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04050573159575615
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.04039918861564825
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.040294508950187685
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0401912579067713
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.040086482950841384
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03998241270773451
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03987867736122096
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.039772259085758134
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.039669512781808344
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03956745840330082
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03946601931529332
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.039364639220155595
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03922293630267615
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03912526929998116
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03902815419692516
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.038929605370611645
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0388318896750382
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03873664360969043
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03863900921647047
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03853923610719091
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.038443174788951255
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03834964964518323
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03825417410946704
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.038159650065325776
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03806186187090817
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03796803249357218
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.037874550241873924
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03778116864017184
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.037688718977342585
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.037596363284420196
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03750187168046141
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03741078901416157
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03731988413520949
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0372298385121974
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.037142317709613466
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03705269672992679
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.036963990435329816
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03687772802986931
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03678937878641921
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0367015675566918
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03661665347900697
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.036529707215433305
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03644301003597386
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03635675877511745
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03627142038203535
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03618553472108555
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03610088057819041
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03601590315826881
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03593246490549124
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03584807901958226
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03576438584827763
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0356817106513329
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03559896306141538
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03551651721360281
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03543505827116193
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03535308959354875
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03526964163979559
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.035189088315920346
+m1_encoder_count: 423
+m2_encoder_count: -127
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.035108576010215976
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03502863876073444
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.034948844895996437
+m1_encoder_count: 423
+m2_encoder_count: -126
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03486990097835814
+m1_encoder_count: 423
+m2_encoder_count: -125
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.034790736277310184
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03471203512733149
+m1_encoder_count: 423
+m2_encoder_count: -124
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03463379107390136
+m1_encoder_count: 423
+m2_encoder_count: -123
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03455647376682176
+m1_encoder_count: 423
+m2_encoder_count: -122
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03447855868727932
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.034401439249575894
+m1_encoder_count: 423
+m2_encoder_count: -121
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03432447488839644
+m1_encoder_count: 423
+m2_encoder_count: -120
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03424564127903512
+m1_encoder_count: 423
+m2_encoder_count: -120
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03416976824769822
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03409371665789311
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.034018498541755565
+m1_encoder_count: 423
+m2_encoder_count: -119
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03394316999526846
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03386875399497565
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03379623694316829
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.033724119330706556
+m1_encoder_count: 423
+m2_encoder_count: -118
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03365045276444435
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03357732699026144
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03350353425940066
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03343082979277793
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.033358257730025244
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.033286375833928995
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03321594465914205
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03314468615249663
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03307309753871493
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.033002287529432114
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.032931714346234556
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03286329560764669
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03279318408130821
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.032723831667452026
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03265371187208103
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03258508957477203
+m1_encoder_count: 423
+m2_encoder_count: -117
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03251759852616956
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.032446907900417134
+m1_encoder_count: 423
+m2_encoder_count: -116
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03237868575108885
+m1_encoder_count: 423
+m2_encoder_count: -115
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.032310616333139634
+m1_encoder_count: 423
+m2_encoder_count: -115
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03224246187094743
+m1_encoder_count: 423
+m2_encoder_count: -114
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03217574478748725
+m1_encoder_count: 423
+m2_encoder_count: -114
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03210992875652888
+m1_encoder_count: 423
+m2_encoder_count: -114
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03204309992442891
+m1_encoder_count: 423
+m2_encoder_count: -114
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03197684165917329
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031909893080228784
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0318437509312892
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03177799555592825
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03171273777700402
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03164715129784851
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031582328032018644
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03151747886490777
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03145322085288368
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03138866206118682
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031324485680334496
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031261089700746494
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031197498379346163
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031136228402285176
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031073334766399823
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.031010494657481912
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030948113027800605
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03088620772476184
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030822232803851025
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030760412395189292
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03069900232212874
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030637711797908734
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030576699520139576
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030516049612997666
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030455812369553262
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03039740647237011
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030337170560601433
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030277423563187893
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030217791367977965
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030156370743141363
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.03009780995573776
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.030038987005249117
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029979848272110064
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02992183794392605
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029863655526175908
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02980579779151259
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029744719188350633
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029687242483923088
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029628223986339144
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029569459154211615
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0295131915629624
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02945776508738654
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02940166195454374
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029345645106247906
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029289582122889006
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0292340738033413
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029178270105326313
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029123259744804703
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029067836371716615
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.029013158309786822
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02895849503496677
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028904298273779452
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028849759747109557
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028795352558536158
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02874190248408101
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02868808758186788
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02863460279490297
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028581588307787575
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028528484280788618
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02847593831040024
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028422937594650227
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02837036552960638
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02831819279383627
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028266399322166395
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02821571378581462
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02816407883321754
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028111116095691783
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.028060118235846726
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02800857502289661
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027956063658133926
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027905193609477682
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027854750655460128
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027804405675427857
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027755585483456937
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027705627711822427
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027656047784295264
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027607489944941513
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02755807119375582
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027508852258268313
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027459611427520188
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027409224984047836
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027358890484612815
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02731010375133966
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02726166489318313
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02721372636772444
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0271667180512675
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027118917873726722
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027071410114235285
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.027023440528588655
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0269760121545114
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026928791155809012
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026882077742460486
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02683628624116651
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02678943068790162
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02674286476548925
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026696336392916152
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026650266305155827
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026603987842671695
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026558081033210272
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026512194506545798
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02646505461646122
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026419936867971134
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026374223043105483
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02632941014121267
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0262857091488104
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026241614736071606
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02619725841097461
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026152676896277188
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026108233716259893
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02606394657361285
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.026019855429070062
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025976010913438305
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025933277076227442
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025889238715294187
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02584627381020085
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025802726759379543
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025759598453726947
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025717600433017573
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025674759219725344
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02563177680602834
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02558922958103884
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025547030124243336
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025504298548260876
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025461997223255366
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025419897084343387
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025377877987501147
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02533604608275054
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02529431355171775
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025252863003526794
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025210104386464514
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025169010000399304
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02512775521341547
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025085496441061957
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025044601167386365
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.025001492263434386
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02496081194946889
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02492021009343618
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024880109246174707
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024839746894574605
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024799680919074196
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024759730663741212
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02472020645424473
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02468125912601903
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024641828480947602
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024602478762728097
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02456287414560615
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024522703443535063
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024483817233697795
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024445914367891394
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024407056885577122
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024368430523033488
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024330660713384106
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024292468300125707
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024253951414973766
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024215859112597105
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024177801156457793
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024139882693225798
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02410080428219055
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02406322774371138
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.024025422656569245
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02398800738092014
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023950489319644608
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023913384666481678
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023876907883576565
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023840223041790804
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023803468242159082
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023767495116565042
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023730912450899862
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023694296600825875
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023657878672669018
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0236214404685636
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023585111954420358
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023549232555203987
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023513994024696724
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023477831728670143
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023442625754394972
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023406641223946315
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023371253817041363
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02333552917454245
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023300241573817753
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023265926419340204
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023230816212104828
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02319588681568203
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0231607880215556
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023126044887114002
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.023092229402275632
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02305765557928099
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02302315993005136
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0229885186450062
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022954343872797822
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02292000752449003
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02288610178311431
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022851875150555714
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02281812541342396
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022784186264717912
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022749378135782577
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02271583474417775
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02268225040775637
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022648873877567838
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022616558269672796
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02258319346448793
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02255017431850424
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022517048933772387
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022484213951719123
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022451349028355824
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02241865445228291
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022385923505939917
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02235344956680833
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022320934161943196
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02228848045749384
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022257214407450182
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022224963267638
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022193076628950904
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02216094399844622
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022129185936681964
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022097340984072004
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0220657573593798
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022033882108835487
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.022002635662654667
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021970885554375312
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021939775579724152
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02190829674312392
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021877201992555256
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02184600057493811
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021814996061917637
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02178407306999686
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02175333373084466
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02171978393004164
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021689038246339266
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021658488161029284
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02162796766015084
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021597537599162827
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021567306601952507
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021537226470139652
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021506988388959713
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02147700313667865
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021446954469655034
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021417134566495064
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02138726819600817
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021356460961596498
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02132601034233236
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021296562474968358
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02126713734006497
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02123773151444248
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02120838452035126
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021179239503525824
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021149916750708892
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021120945779417064
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021092791300778742
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021063915841979735
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021035177253640947
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.021006319975821253
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02097667333253045
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02094829352084116
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02091969210231732
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02089125500795208
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020862861230001587
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020834754192934787
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0208063602886824
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020778395329470203
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02074991476345115
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020722303481279052
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020694323906847688
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020666593796627226
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02063881350844528
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020610219302166808
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020582785733354994
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02055512404686732
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020527919705984835
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02050023834828751
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020473026641737457
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020445801401184502
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020418600243585685
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020391453626047596
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02036467954050813
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02033726492057986
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02031080153137401
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.02028377459459074
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020257252381688375
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020230421364915638
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020203987827459097
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020177314756368962
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020150952435001115
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.0201245040504887
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020098185335620862
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020071905909305344
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020045878772999477
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.020019650242156784
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01999367074204845
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019967498827867174
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019941747042773742
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019916569059989026
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019890796665337183
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01986508284924567
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019839401408334224
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01981400699515671
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019788301711818064
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01976283527386379
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019737420914832656
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019712250857420278
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01968684632274045
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01966192843336634
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01963744198451526
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019612335883045676
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01958746181291505
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01956240107528691
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01953748254187488
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019512687574109917
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019487994229115475
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019463213737179047
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019438641720046113
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019414035657656505
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019389651566822725
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01936510713023457
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019340837787299555
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01931636927624091
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019292254199614757
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019268076989689777
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019243984561177405
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019219713952524514
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019195865740045483
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01917179088892338
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019148144016744792
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01912488876217979
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019100979543868576
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019077383525662652
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019054452644322394
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019030819403735074
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.019007378715024042
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018983772049875322
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01896031119561574
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01893701009588269
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01891380707092275
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01889049518384723
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018867308114303705
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018844070677499575
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01882100525445604
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018798020275887665
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018775064165732158
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018752180186909256
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018729467533380634
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018706450734294982
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018683907148976952
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018661074694611274
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01863860711337867
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018616620003582184
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01859405093853648
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018571654563046207
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01854914929003575
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01852693998596311
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01850447134976294
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018482233264590888
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018459819324717547
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018438058473167946
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018416483297131518
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018394342615292176
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018372498910907628
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.018350401184380995
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01793181933931402
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Feedback:
+    current_pos:
+  x: 0.8448761208746111
+  y: 0.0
+current_velocity: 0.01791091926830143
+m1_encoder_count: 423
+m2_encoder_count: -113
+
+Failed to cancel goal

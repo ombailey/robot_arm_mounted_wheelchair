@@ -1,0 +1,14 @@
+# Goal
+Pos2D desired_pos
+float64 desired_velocity
+---
+# Result
+bool success
+Pos2D final_pos
+float64 final_time
+---
+# Feedback  
+Pos2D current_pos
+float64 current_velocity
+int64 m1_encoder_count
+int64 m2_encoder_count    
