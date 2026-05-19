@@ -24,6 +24,13 @@ class RoboClawNode(Node):
         self.roboclaw.Open()
         self.roboclaw.SpeedM1(self.address,0)
         self.roboclaw.SpeedM2(self.address,0)
+        time.sleep(0.02)
+        self.roboclaw.SetM1VelocityPID(self.address,20000, 0, 16384, 26027 )
+        self.roboclaw.SetM2VelocityPID(self.address,20000, 0, 16384, 26027 )
+        time.sleep(0.02)
+        status = self.roboclaw.ReadError(self.address)
+        self.get_logger().info(f'{status}')
+        self.get_logger().info(f'{hex(status[1])}')
 
         # Subscriber for velocity commands
         self.cmd_vel_sub = self.create_subscription(
@@ -49,8 +56,9 @@ class RoboClawNode(Node):
         self.roboclaw.SpeedM1(self.address,linear)
         self.roboclaw.SpeedM2(self.address,linear)
         self.get_logger().info(f'{linear} counts/s')
-        self.get_logger().info(f'M1 Speed: {self.roboclaw.ReadISpeedM1(self.address)}')
-        self.get_logger().info(f'M2 Speed: {self.roboclaw.ReadISpeedM2(self.address)}')
+        self.get_logger().info(f'M1 Speed: {self.roboclaw.ReadSpeedM1(self.address)}')
+        self.get_logger().info(f'M2 Speed: {self.roboclaw.ReadSpeedM2(self.address)}')
+        status = self.roboclaw.ReadError(self.address)
         # self.roboclaw.ForwardM1(self.address,linear)
         # self.roboclaw.ForwardM2(self.address,linear)
         time.sleep(2)

@@ -9,6 +9,7 @@ float64 final_time
 ---
 # Feedback  
 Pos2D current_pos
-float64 current_velocity
+float64 current_m1_velocity
+float64 current_m2_velocity
 int64 m1_encoder_count
 int64 m2_encoder_count    
