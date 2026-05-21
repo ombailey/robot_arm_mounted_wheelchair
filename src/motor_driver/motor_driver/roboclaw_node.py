@@ -8,7 +8,6 @@ from roboclaw_python.roboclaw_3 import Roboclaw
 class RoboClawNode(Node):
     def __init__(self):
         super().__init__('roboclaw_node')
-        self.timer = self.create_timer(1,self.read_encoders)
 
         # Motor Speed Limits
         self.motorHigh = 127
@@ -22,16 +21,7 @@ class RoboClawNode(Node):
         self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
         self.address = 0x80
         self.roboclaw.Open()
-        self.roboclaw.SpeedM1(self.address,0)
-        self.roboclaw.SpeedM2(self.address,0)
-        time.sleep(0.02)
-        self.roboclaw.SetM1VelocityPID(self.address,20000, 0, 16384, 26027 )
-        self.roboclaw.SetM2VelocityPID(self.address,20000, 0, 16384, 26027 )
-        time.sleep(0.02)
-        status = self.roboclaw.ReadError(self.address)
-        self.get_logger().info(f'{status}')
-        self.get_logger().info(f'{hex(status[1])}')
-
+        self.get_logger().info(f'{self.roboclaw.ReadError(self.address)}')
         # Subscriber for velocity commands
         self.cmd_vel_sub = self.create_subscription(
             Twist,             # message type
@@ -48,24 +38,19 @@ class RoboClawNode(Node):
 
     def cmd_vel_callback(self, msg):
         linear = int(msg.linear.x)
-        counts_per_meter = (self.counts / self.wheel_circumference)
-        linear = round(linear * counts_per_meter) 
-        angular = msg.angular.z
+        # counts_per_meter = (self.counts / self.wheel_circumference)
+        # linear = round(linear * counts_per_meter) 
+        # angular = msg.angular.z
   
         self.get_logger().info("Moving")
-        self.roboclaw.SpeedM1(self.address,linear)
-        self.roboclaw.SpeedM2(self.address,linear)
-        self.get_logger().info(f'{linear} counts/s')
+
+        self.roboclaw.ForwardM1(self.address,linear)
+        self.roboclaw.ForwardM2(self.address,linear)
         self.get_logger().info(f'M1 Speed: {self.roboclaw.ReadSpeedM1(self.address)}')
         self.get_logger().info(f'M2 Speed: {self.roboclaw.ReadSpeedM2(self.address)}')
-        status = self.roboclaw.ReadError(self.address)
-        # self.roboclaw.ForwardM1(self.address,linear)
-        # self.roboclaw.ForwardM2(self.address,linear)
         time.sleep(2)
-        self.roboclaw.SpeedM1(self.address,0)
-        self.roboclaw.SpeedM2(self.address,0)
-        # self.roboclaw.ForwardM1(self.address,0)
-        # self.roboclaw.ForwardM2(self.address,0)
+        self.roboclaw.ForwardM1(self.address,0)
+        self.roboclaw.ForwardM2(self.address,0)
         
 def main(args=None):
     rclpy.init(args=args)
@@ -73,5 +58,5 @@ def main(args=None):
     rclpy.spin(node)
     rclpy.shutdown()
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     main()

@@ -35,7 +35,7 @@ class MoveToServerNode(Node):
         feedback = MoveTo.Feedback()
 
         # Initializing Roboclaw
-        self.roboclaw = Roboclaw("/dev/ttyACM1", 38400)
+        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
         self.address = 0x80
         self.roboclaw.Open()
         # Initializing Variables
@@ -46,7 +46,7 @@ class MoveToServerNode(Node):
         self.inches_to_meters = 0.0254
         self.wheel_circumference = 13*math.pi*self.inches_to_meters
         self.counts = 512
-        self.expected_time = x/vel
+        self.expected_time = abs(x/vel) * 1.5
         elaspedTime = 0.0
 
         # Encoder Variables
@@ -77,7 +77,7 @@ class MoveToServerNode(Node):
         waypoints_m2 = np.linspace(M2_encoder_start_count,M2_encoder_target_count,steps,dtype=int)
         
         # Pure Translation
-        if (x and not y):
+        if (x != 0.0 and y == 0.0):
             
             # Log Current and Target Encoder Count
             self.get_logger().info(f'Current M1 Encoder Count:{M1_encoder_start_count}')
@@ -93,7 +93,7 @@ class MoveToServerNode(Node):
                 prevTime = startTime
                 
                 for num in range(1,len(waypoints_m1)):
-                    self.roboclaw.SpeedDistanceM1M2(self.address,speed_counts,int(waypoints_m1[num]),speed_counts,int(waypoints_m2[num]),1)
+                    self.roboclaw.SpeedM1M2(self.address,speed_counts, speed_counts)
 
                     while abs(waypoints_m1[num] - M1_encoder_current_count) > tolerance or abs(waypoints_m2[num]-M2_encoder_current_count) > tolerance :
 
@@ -114,18 +114,20 @@ class MoveToServerNode(Node):
                             self.stop_motors()
                             goal_handle.canceled()
                             result.success = False
-                            result.final_pos = float(current_x_m)
+                            result.final_pos.x = float(current_x_m)
+                            result.final_pos.y = 0.0
                             result.final_time = elaspedTime
                             return result
                         
                         # Encoder Check
                         M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
                         M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
-                        if not (M1status or M2status):
+                        if not (M1status and M2status):
                             self.stop_motors()
                             goal_handle.abort()
                             result.success = False
-                            result.final_pos = float(current_x_m)
+                            result.final_pos.x = float(current_x_m)
+                            result.final_pos.y = 0.0
                             result.final_time = elaspedTime
                             return result
                         
@@ -134,7 +136,8 @@ class MoveToServerNode(Node):
                             self.stop_motors()
                             goal_handle.abort()
                             result.success = False
-                            result.final_pos = float(current_x_m)
+                            result.final_pos.x = float(current_x_m)
+                            result.final_pos.y = 0.0
                             result.final_time = elaspedTime
                             return result
                         
@@ -162,7 +165,6 @@ class MoveToServerNode(Node):
                         feedback.m1_encoder_count = int(M1_encoder_current_count)
                         feedback.m2_encoder_count = int(M2_encoder_current_count)
                         goal_handle.publish_feedback(feedback)
-                        time.sleep(0.01)
 
                     # Waypoint Reached Log
                     self.get_logger().info(f"Waypoint {waypoints_m1[num]} reached for M1.")
@@ -172,14 +174,17 @@ class MoveToServerNode(Node):
                 endTime = time.perf_counter()
                 self.stop_motors()
                 result.success = True
-                result.final_pos.x = current_x_m
+                result.final_pos.x = float(current_x_m)
+                result.final_pos.y = 0.0
                 result.final_time = endTime-startTime
                 return result
             
             except Exception as e:
                 self.stop_motors()
+                result.success = False
                 goal_handle.abort()
                 self.get_logger().info(f"An exception occured: {e}")
+                return result
 
 def main(args=None):
     rclpy.init(args=args)
