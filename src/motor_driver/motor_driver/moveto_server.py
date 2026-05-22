@@ -27,7 +27,6 @@ class MoveToServerNode(Node):
     
     def cancel_callback(self, goal_handle: ServerGoalHandle):
         self.get_logger().info("Received a cancel request")
-        self.stop_motors()
         return CancelResponse.ACCEPT
     
     def execute_callback(self, goal_handle: ServerGoalHandle):
@@ -35,7 +34,7 @@ class MoveToServerNode(Node):
         feedback = MoveTo.Feedback()
 
         # Initializing Roboclaw
-        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400)
+        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400, timeout=0.01)
         self.address = 0x80
         self.roboclaw.Open()
         # Initializing Variables
@@ -54,8 +53,8 @@ class MoveToServerNode(Node):
         deltaM2_count = 0
         counts_per_meter = (self.counts / self.wheel_circumference)
         meters_per_count = (self.wheel_circumference / self.counts)
-        m1_encoder_status, M1_encoder_start_count, _ = self.roboclaw.ReadEncM1(self.address)
-        m2_encoder_status, M2_encoder_start_count, _ = self.roboclaw.ReadEncM2(self.address)
+        m1_encoder_status, M1_encoder_start_count,_  = self.roboclaw.ReadEncM1(self.address)
+        m2_encoder_status, M2_encoder_start_count,_  = self.roboclaw.ReadEncM2(self.address)
         delta_counts = int(round(x *counts_per_meter))
         M1_encoder_target_count =round( M1_encoder_start_count + delta_counts) 
         M2_encoder_target_count =round( M2_encoder_start_count + delta_counts)
@@ -64,17 +63,12 @@ class MoveToServerNode(Node):
         M2_encoder_current_count = M2_encoder_start_count
         M1_encoder_prev_count = M1_encoder_start_count
         M2_encoder_prev_count = M2_encoder_start_count
-        tolerance = 5 # delta count tolerance
+        tolerance = 10 # delta count tolerance
 
         # Stall Variables 
         stall_threshold = 0.5 #seconds
         stall_time = 0 #seconds
         stall_delta = 3 #counts
-
-        # Waypoints
-        steps = 10 
-        waypoints_m1 = np.linspace(M1_encoder_start_count,M1_encoder_target_count,steps,dtype=int)
-        waypoints_m2 = np.linspace(M2_encoder_start_count,M2_encoder_target_count,steps,dtype=int)
         
         # Pure Translation
         if (x != 0.0 and y == 0.0):
@@ -84,66 +78,61 @@ class MoveToServerNode(Node):
             self.get_logger().info(f'Target M1 Encoder Count:{M1_encoder_target_count}')
             self.get_logger().info(f'Current M2 Encoder Count:{M2_encoder_start_count}')
             self.get_logger().info(f'Target M2 Encoder Count:{M2_encoder_target_count}')
-            self.get_logger().info(f'M1 Waypoints: {waypoints_m1}')
-            self.get_logger().info(f'M2 Waypoints: {waypoints_m2}')
 
             # Begin Motion Control
             try:
                 startTime = time.perf_counter()
                 prevTime = startTime
                 
-                for num in range(1,len(waypoints_m1)):
-                    self.roboclaw.SpeedM1M2(self.address,speed_counts, speed_counts)
+                self.roboclaw.SpeedM1M2(self.address,speed_counts, speed_counts)
 
-                    while abs(waypoints_m1[num] - M1_encoder_current_count) > tolerance or abs(waypoints_m2[num]-M2_encoder_current_count) > tolerance :
+                while (abs(M1_encoder_target_count - M1_encoder_current_count) > tolerance or abs(M2_encoder_target_count - M2_encoder_current_count) > tolerance):                    # Update Position and Velocity
+                    currentTime = time.perf_counter()
+                    elaspedTime = currentTime - startTime
+                    current_x_m = abs(M1_encoder_current_count- M1_encoder_start_count) * (self.wheel_circumference/self.counts)
 
-                        # Update Position and Velocity
-                        currentTime = time.perf_counter()
-                        elaspedTime = currentTime - startTime
-                        current_x_m = abs(M1_encoder_current_count- M1_encoder_start_count) * (self.wheel_circumference/self.counts)
+                    # current_x_velocity = current_x_m / (currentTime - prevTime)
+                    m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
+                    m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
 
-                        # current_x_velocity = current_x_m / (currentTime - prevTime)
-                        m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
-                        m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
+                    if m1_vel_status is None or m2_vel_status is None:
+                        self.stop_motors()
 
-                        if m1_vel_status is None or m2_vel_status is None:
-                            raise RuntimeError("Failed to read motor velocity.")
-
-                        # Cancel Request Check
-                        if (goal_handle.is_cancel_requested):
-                            self.stop_motors()
-                            goal_handle.canceled()
-                            result.success = False
-                            result.final_pos.x = float(current_x_m)
-                            result.final_pos.y = 0.0
-                            result.final_time = elaspedTime
-                            return result
+                    # Cancel Request Check
+                    if (goal_handle.is_cancel_requested):
+                        self.stop_motors()
+                        goal_handle.canceled()
+                        result.success = False
+                        result.final_pos.x = float(current_x_m)
+                        result.final_pos.y = 0.0
+                        result.final_time = elaspedTime
+                        return result
                         
-                        # Encoder Check
-                        M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
-                        M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
-                        if not (M1status and M2status):
-                            self.stop_motors()
-                            goal_handle.abort()
-                            result.success = False
-                            result.final_pos.x = float(current_x_m)
-                            result.final_pos.y = 0.0
-                            result.final_time = elaspedTime
-                            return result
+                    # Encoder Check
+                    M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
+                    M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
+                    if not (M1status and M2status):
+                        self.stop_motors()
+                        goal_handle.abort()
+                        result.success = False
+                        result.final_pos.x = float(current_x_m)
+                        result.final_pos.y = 0.0
+                        result.final_time = elaspedTime
+                        return result
                         
-                        # Timeout Check
-                        if elaspedTime > self.expected_time:
-                            self.stop_motors()
-                            goal_handle.abort()
-                            result.success = False
-                            result.final_pos.x = float(current_x_m)
-                            result.final_pos.y = 0.0
-                            result.final_time = elaspedTime
-                            return result
+                    # Timeout Check
+                    if elaspedTime > self.expected_time:
+                        self.stop_motors()
+                        goal_handle.abort()
+                        result.success = False
+                        result.final_pos.x = float(current_x_m)
+                        result.final_pos.y = 0.0
+                        result.final_time = elaspedTime
+                        return result
                         
-                        # Stall Check
-                        # if abs(M1_encoder_current_count - M1_encoder_prev_count) < stall_delta or abs(M2_encoder_current_count-M2_encoder_prev_count) < stall_delta:
-                        #     stall_time += (currentTime - prevTime)
+                    # Stall Check
+                     # if abs(M1_encoder_current_count - M1_encoder_prev_count) < stall_delta or abs(M2_encoder_current_count-M2_encoder_prev_count) < stall_delta:
+                     #     stall_time += (currentTime - prevTime)
 
                         # if stall_time > stall_threshold:
                         #     self.stop_motors()
@@ -153,38 +142,38 @@ class MoveToServerNode(Node):
                         #     result.final_time = elaspedTime
                         #     return result
                         
-                        # Update prev count and prev time
-                        M1_encoder_prev_count= M1_encoder_current_count
-                        M2_encoder_prev_count = M2_encoder_current_count
-                        prevTime = currentTime
+                    # Update prev count and prev time
+                    M1_encoder_prev_count= M1_encoder_current_count
+                    M2_encoder_prev_count = M2_encoder_current_count
+                    prevTime = currentTime
 
-                        # Feedback Update
-                        feedback.current_pos.x = float(current_x_m)
-                        feedback.current_m1_velocity = float(current_m1_velocity)
-                        feedback.current_m2_velocity = float(current_m2_velocity)
-                        feedback.m1_encoder_count = int(M1_encoder_current_count)
-                        feedback.m2_encoder_count = int(M2_encoder_current_count)
-                        goal_handle.publish_feedback(feedback)
-
-                    # Waypoint Reached Log
-                    self.get_logger().info(f"Waypoint {waypoints_m1[num]} reached for M1.")
-                    self.get_logger().info(f"Waypoint {waypoints_m2[num]} reached for M2.")
-                
-                goal_handle.succeed()
-                endTime = time.perf_counter()
-                self.stop_motors()
-                result.success = True
-                result.final_pos.x = float(current_x_m)
-                result.final_pos.y = 0.0
-                result.final_time = endTime-startTime
-                return result
+                    # Feedback Update
+                    feedback.current_pos.x = float(current_x_m)
+                    feedback.current_m1_velocity = float(current_m1_velocity)
+                    feedback.current_m2_velocity = float(current_m2_velocity)
+                    feedback.m1_encoder_count = int(M1_encoder_current_count)
+                    feedback.m2_encoder_count = int(M2_encoder_current_count)
+                    goal_handle.publish_feedback(feedback)
+                    time.sleep(0.005)
             
             except Exception as e:
                 self.stop_motors()
                 result.success = False
                 goal_handle.abort()
-                self.get_logger().info(f"An exception occured: {e}")
+                self.get_logger().error(f"An exception occured: {e}")
                 return result
+            
+            finally:
+                self.stop_motors()
+            
+            goal_handle.succeed()
+            endTime = time.perf_counter()
+            self.stop_motors()
+            result.success = True
+            result.final_pos.x = float(current_x_m)
+            result.final_pos.y = 0.0
+            result.final_time = endTime-startTime
+            return result
 
 def main(args=None):
     rclpy.init(args=args)
