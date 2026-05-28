@@ -37,16 +37,23 @@ class MoveToServerNode(Node):
         self.roboclaw = Roboclaw("/dev/ttyACM0", 38400, timeout=0.01)
         self.address = 0x80
         self.roboclaw.Open()
+        
         # Initializing Variables
         goal = goal_handle.request
         x = goal.desired_pos.x # meters
         y = goal.desired_pos.y # meters
+        theta = goal.desired_pos.theta # radians
         vel = goal.desired_velocity # m/s
+        ang_vel = goal.desired_angular_velocity # rad/s
+        wheelbase_width = 21.375
         self.inches_to_meters = 0.0254
         self.wheel_circumference = 13*math.pi*self.inches_to_meters
         self.counts = 512
-        self.expected_time = abs(x/vel) * 1.5
         elaspedTime = 0.0
+        motion_type = None
+        current_x_m = 0.0
+        current_y_m = 0.0
+        current_theta = 0.0
 
         # Encoder Variables
         deltaM1_counts = 0
@@ -55,10 +62,6 @@ class MoveToServerNode(Node):
         meters_per_count = (self.wheel_circumference / self.counts)
         m1_encoder_status, M1_encoder_start_count,_  = self.roboclaw.ReadEncM1(self.address)
         m2_encoder_status, M2_encoder_start_count,_  = self.roboclaw.ReadEncM2(self.address)
-        delta_counts = int(round(x *counts_per_meter))
-        M1_encoder_target_count =round( M1_encoder_start_count + delta_counts) 
-        M2_encoder_target_count =round( M2_encoder_start_count + delta_counts)
-        speed_counts = round(vel * counts_per_meter)
         M1_encoder_current_count = M1_encoder_start_count
         M2_encoder_current_count = M2_encoder_start_count
         M1_encoder_prev_count = M1_encoder_start_count
@@ -69,112 +72,184 @@ class MoveToServerNode(Node):
         stall_threshold = 0.5 #seconds
         stall_time = 0 #seconds
         stall_delta = 3 #counts
+
+        # Result Functions
+        def failed_result(motion_type):
+            result.success = False
+
+            if motion_type == "translation":
+                result.final_pos.x = float(current_x_m)
+                result.final_pos.y = 0.0
+                result.final_theta = 0.0
+                result.final_time = elaspedTime
+                return result
+            
+            elif motion_type == "rotation":
+                result.final_pos.x = 0.0
+                result.final_pos.y = 0.0
+                result.final_theta = math.degrees(current_theta)
+                result.final_time = elaspedTime
+                return result
+        
+        def successful_result(motion_type):
+            result.success = True
+
+            if motion_type == "translation":
+                result.final_pos.x = float(current_x_m)
+                result.final_pos.y = 0.0
+                result.final_theta = 0.0
+                result.final_time = endTime-startTime
+                return result
+        
+            elif motion_type == "rotation":
+                result.final_pos.x = 0.0
+                result.final_pos.y = 0.0
+                result.final_theta = math.degrees(current_theta)
+                result.final_time = endTime-startTime
+                return result
         
         # Pure Translation
-        if (x != 0.0 and y == 0.0):
+        if (x != 0.0 and y == 0.0 and theta == 0.0 and ang_vel == 0.0):
+
+            motion_type = "translation"
+            delta_counts = int(round(x *counts_per_meter))
+            M1_encoder_target_count =round( M1_encoder_start_count + delta_counts) 
+            M2_encoder_target_count =round( M2_encoder_start_count + delta_counts)
+            M1_speed_counts = round(vel * counts_per_meter)
+            M2_speed_counts = M1_speed_counts
+            self.expected_time = abs(x/vel) * 1.5
+
+        # Pure Rotation
+        elif (x == 0.0 and y == 0.0 and vel == 0.0 and theta != 0.0 and ang_vel != 0.0):
+
+            motion_type = "rotation"
+            radius = wheelbase_width/2
+            rightwheel_velocity = ang_vel * radius
+            leftwheel_velocity = -ang_vel * radius
+            arclength = theta*radius
+            self.expected_time = abs(theta/ang_vel) * 1.5
             
+            delta_counts = int(round(arclength * counts_per_meter))
+            M1_encoder_target_count = M1_encoder_start_count + delta_counts
+            M2_encoder_target_count = M2_encoder_start_count - delta_counts
+            M1_speed_counts = round(rightwheel_velocity * counts_per_meter)
+            M2_speed_counts = round(leftwheel_velocity * counts_per_meter)
+        
+        else:
+            goal_handle.abort()
+            self.stop_motors()
+            result.success = False
+            return result
+
+        # Begin Motion Control
+        try:
             # Log Current and Target Encoder Count
             self.get_logger().info(f'Current M1 Encoder Count:{M1_encoder_start_count}')
             self.get_logger().info(f'Target M1 Encoder Count:{M1_encoder_target_count}')
             self.get_logger().info(f'Current M2 Encoder Count:{M2_encoder_start_count}')
             self.get_logger().info(f'Target M2 Encoder Count:{M2_encoder_target_count}')
+            
+            startTime = time.perf_counter()
+            prevTime = startTime
+            
+            
+            self.roboclaw.SpeedM1M2(self.address,M1_speed_counts, M2_speed_counts)
 
-            # Begin Motion Control
-            try:
-                startTime = time.perf_counter()
-                prevTime = startTime
-                
-                self.roboclaw.SpeedM1M2(self.address,speed_counts, speed_counts)
+            while (abs(M1_encoder_target_count - M1_encoder_current_count) > tolerance or abs(M2_encoder_target_count - M2_encoder_current_count) > tolerance):                    # Update Position and Velocity
+                currentTime = time.perf_counter()
+                elaspedTime = currentTime - startTime
 
-                while (abs(M1_encoder_target_count - M1_encoder_current_count) > tolerance or abs(M2_encoder_target_count - M2_encoder_current_count) > tolerance):                    # Update Position and Velocity
-                    currentTime = time.perf_counter()
-                    elaspedTime = currentTime - startTime
+                 # Cancel Request Check
+                if (goal_handle.is_cancel_requested):
+                    self.stop_motors()
+                    goal_handle.canceled()
+                    return failed_result(motion_type)
+
+                # Velocity Check 
+                m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
+                m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
+
+                if m1_vel_status is None or m2_vel_status is None:
+                    self.stop_motors()
+                    goal_handle.abort()
+                    return failed_result(motion_type)
+
+                # Encoder Check
+                M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
+                M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
+                if not (M1status and M2status):
+                    self.stop_motors()
+                    goal_handle.abort()
+                    return failed_result(motion_type)
+                    
+                # Timeout Check
+                if elaspedTime > self.expected_time:
+                    self.stop_motors()
+                    goal_handle.abort()
+                    return failed_result(motion_type)
+                    
+                # Stall Check
+                    # if abs(M1_encoder_current_count - M1_encoder_prev_count) < stall_delta or abs(M2_encoder_current_count-M2_encoder_prev_count) < stall_delta:
+                    #     stall_time += (currentTime - prevTime)
+
+                    # if stall_time > stall_threshold:
+                    #     self.stop_motors()
+                    #     goal_handle.abort()
+                    #     result.success = False
+                    #     result.final_pos = float(current_x_m)
+                    #     result.final_time = elaspedTime
+                    #     return result
+                    
+                # Update prev count and prev time
+                M1_encoder_prev_count= M1_encoder_current_count
+                M2_encoder_prev_count = M2_encoder_current_count
+                prevTime = currentTime
+
+                if motion_type == "translation":
+                    
                     current_x_m = abs(M1_encoder_current_count- M1_encoder_start_count) * (self.wheel_circumference/self.counts)
-
-                    # current_x_velocity = current_x_m / (currentTime - prevTime)
-                    m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
-                    m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
-
-                    if m1_vel_status is None or m2_vel_status is None:
-                        self.stop_motors()
-
-                    # Cancel Request Check
-                    if (goal_handle.is_cancel_requested):
-                        self.stop_motors()
-                        goal_handle.canceled()
-                        result.success = False
-                        result.final_pos.x = float(current_x_m)
-                        result.final_pos.y = 0.0
-                        result.final_time = elaspedTime
-                        return result
-                        
-                    # Encoder Check
-                    M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
-                    M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
-                    if not (M1status and M2status):
-                        self.stop_motors()
-                        goal_handle.abort()
-                        result.success = False
-                        result.final_pos.x = float(current_x_m)
-                        result.final_pos.y = 0.0
-                        result.final_time = elaspedTime
-                        return result
-                        
-                    # Timeout Check
-                    if elaspedTime > self.expected_time:
-                        self.stop_motors()
-                        goal_handle.abort()
-                        result.success = False
-                        result.final_pos.x = float(current_x_m)
-                        result.final_pos.y = 0.0
-                        result.final_time = elaspedTime
-                        return result
-                        
-                    # Stall Check
-                     # if abs(M1_encoder_current_count - M1_encoder_prev_count) < stall_delta or abs(M2_encoder_current_count-M2_encoder_prev_count) < stall_delta:
-                     #     stall_time += (currentTime - prevTime)
-
-                        # if stall_time > stall_threshold:
-                        #     self.stop_motors()
-                        #     goal_handle.abort()
-                        #     result.success = False
-                        #     result.final_pos = float(current_x_m)
-                        #     result.final_time = elaspedTime
-                        #     return result
-                        
-                    # Update prev count and prev time
-                    M1_encoder_prev_count= M1_encoder_current_count
-                    M2_encoder_prev_count = M2_encoder_current_count
-                    prevTime = currentTime
 
                     # Feedback Update
                     feedback.current_pos.x = float(current_x_m)
+                    feedback.current_pos.y = 0.0
+                    feedback.current_theta = 0.0
                     feedback.current_m1_velocity = float(current_m1_velocity)
                     feedback.current_m2_velocity = float(current_m2_velocity)
                     feedback.m1_encoder_count = int(M1_encoder_current_count)
                     feedback.m2_encoder_count = int(M2_encoder_current_count)
                     goal_handle.publish_feedback(feedback)
                     time.sleep(0.005)
-            
-            except Exception as e:
-                self.stop_motors()
-                result.success = False
-                goal_handle.abort()
-                self.get_logger().error(f"An exception occured: {e}")
-                return result
-            
-            finally:
-                self.stop_motors()
-            
-            goal_handle.succeed()
-            endTime = time.perf_counter()
-            self.stop_motors()
-            result.success = True
-            result.final_pos.x = float(current_x_m)
-            result.final_pos.y = 0.0
-            result.final_time = endTime-startTime
-            return result
 
+                elif motion_type == "rotation":
+                    M1_current_distance = (M1_encoder_current_count - M1_encoder_start_count) / counts_per_meter
+                    M2_current_distance = (M2_encoder_current_count - M2_encoder_start_count) / counts_per_meter
+                    current_theta = (M1_current_distance - M2_current_distance) / wheelbase_width
+
+                    # Feedback Update 
+                    feedback.current_pos.x = 0.0
+                    feedback.current_pos.y = 0.0
+                    feedback.current_theta = math.degrees(current_theta)
+                    feedback.current_m1_velocity = float(current_m1_velocity)
+                    feedback.current_m2_velocity = float(current_m2_velocity)
+                    feedback.m1_encoder_count = int(M1_encoder_current_count)
+                    feedback.m2_encoder_count = int(M2_encoder_current_count)
+                    goal_handle.publish_feedback(feedback)
+                    time.sleep(0.005)
+
+        except Exception as e:
+            self.stop_motors()
+            goal_handle.abort()
+            self.get_logger().error(f"An exception occured: {e}")
+            return failed_result(motion_type)
+        
+        finally:
+            self.stop_motors()
+        
+        goal_handle.succeed()
+        endTime = time.perf_counter()
+        self.stop_motors()
+        return successful_result(motion_type)
+        
 def main(args=None):
     rclpy.init(args=args)
     node = MoveToServerNode()

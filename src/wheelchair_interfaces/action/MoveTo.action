@@ -1,14 +1,17 @@
 # Goal
 Pos2D desired_pos
 float64 desired_velocity
+float64 desired_angular_velocity
 ---
 # Result
 bool success
 Pos2D final_pos
+float64 final_theta
 float64 final_time
 ---
 # Feedback  
 Pos2D current_pos
+float64 current_theta
 float64 current_m1_velocity
 float64 current_m2_velocity
 int64 m1_encoder_count
