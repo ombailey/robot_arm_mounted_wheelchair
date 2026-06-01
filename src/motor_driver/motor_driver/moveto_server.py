@@ -34,7 +34,7 @@ class MoveToServerNode(Node):
         feedback = MoveTo.Feedback()
 
         # Initializing Roboclaw
-        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400, timeout=0.01)
+        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400, timeout=0.5)
         self.address = 0x80
         self.roboclaw.Open()
         
@@ -45,8 +45,8 @@ class MoveToServerNode(Node):
         theta = goal.desired_pos.theta # radians
         vel = goal.desired_velocity # m/s
         ang_vel = goal.desired_angular_velocity # rad/s
-        wheelbase_width = 21.375
         self.inches_to_meters = 0.0254
+        wheelbase_width = 21.375 * self.inches_to_meters
         self.wheel_circumference = 13*math.pi*self.inches_to_meters
         self.counts = 512
         elaspedTime = 0.0
@@ -60,8 +60,19 @@ class MoveToServerNode(Node):
         deltaM2_count = 0
         counts_per_meter = (self.counts / self.wheel_circumference)
         meters_per_count = (self.wheel_circumference / self.counts)
-        m1_encoder_status, M1_encoder_start_count,_  = self.roboclaw.ReadEncM1(self.address)
-        m2_encoder_status, M2_encoder_start_count,_  = self.roboclaw.ReadEncM2(self.address)
+        self.get_logger().info(f'{self.roboclaw.ReadEncM1(self.address)}')
+        m1_encoder_read = self.roboclaw.ReadEncM1(self.address)
+        m2_encoder_read = self.roboclaw.ReadEncM2(self.address)
+        if len(m1_encoder_read) !=3 or len(m2_encoder_read) != 3:
+            goal_handle.abort()
+            self.stop_motors()
+            result.success = False
+            return result
+        
+        else:
+            m1_encoder_status, M1_encoder_start_count,_  = m1_encoder_read
+            m2_encoder_status, M2_encoder_start_count,_  = m2_encoder_read
+
         M1_encoder_current_count = M1_encoder_start_count
         M2_encoder_current_count = M2_encoder_start_count
         M1_encoder_prev_count = M1_encoder_start_count
@@ -80,14 +91,14 @@ class MoveToServerNode(Node):
             if motion_type == "translation":
                 result.final_pos.x = float(current_x_m)
                 result.final_pos.y = 0.0
-                result.final_theta = 0.0
+                result.final_pos.theta = 0.0
                 result.final_time = elaspedTime
                 return result
             
             elif motion_type == "rotation":
                 result.final_pos.x = 0.0
                 result.final_pos.y = 0.0
-                result.final_theta = math.degrees(current_theta)
+                result.final_pos.theta = math.degrees(current_theta)
                 result.final_time = elaspedTime
                 return result
         
@@ -97,14 +108,14 @@ class MoveToServerNode(Node):
             if motion_type == "translation":
                 result.final_pos.x = float(current_x_m)
                 result.final_pos.y = 0.0
-                result.final_theta = 0.0
+                result.final_pos.theta = 0.0
                 result.final_time = endTime-startTime
                 return result
         
             elif motion_type == "rotation":
                 result.final_pos.x = 0.0
                 result.final_pos.y = 0.0
-                result.final_theta = math.degrees(current_theta)
+                result.final_pos.theta = math.degrees(current_theta)
                 result.final_time = endTime-startTime
                 return result
         
@@ -117,17 +128,17 @@ class MoveToServerNode(Node):
             M2_encoder_target_count =round( M2_encoder_start_count + delta_counts)
             M1_speed_counts = round(vel * counts_per_meter)
             M2_speed_counts = M1_speed_counts
-            self.expected_time = abs(x/vel) * 1.5
+            self.expected_time = abs(x/vel) * 4
 
         # Pure Rotation
         elif (x == 0.0 and y == 0.0 and vel == 0.0 and theta != 0.0 and ang_vel != 0.0):
 
             motion_type = "rotation"
-            radius = wheelbase_width/2
+            radius = (wheelbase_width/2)
             rightwheel_velocity = ang_vel * radius
             leftwheel_velocity = -ang_vel * radius
             arclength = theta*radius
-            self.expected_time = abs(theta/ang_vel) * 1.5
+            self.expected_time = abs(theta/ang_vel) * 4
             
             delta_counts = int(round(arclength * counts_per_meter))
             M1_encoder_target_count = M1_encoder_start_count + delta_counts
@@ -169,7 +180,7 @@ class MoveToServerNode(Node):
                 m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
                 m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
 
-                if m1_vel_status is None or m2_vel_status is None:
+                if not (m1_vel_status or m2_vel_status):
                     self.stop_motors()
                     goal_handle.abort()
                     return failed_result(motion_type)
@@ -212,13 +223,13 @@ class MoveToServerNode(Node):
                     # Feedback Update
                     feedback.current_pos.x = float(current_x_m)
                     feedback.current_pos.y = 0.0
-                    feedback.current_theta = 0.0
+                    feedback.current_pos.theta = 0.0
                     feedback.current_m1_velocity = float(current_m1_velocity)
                     feedback.current_m2_velocity = float(current_m2_velocity)
                     feedback.m1_encoder_count = int(M1_encoder_current_count)
                     feedback.m2_encoder_count = int(M2_encoder_current_count)
                     goal_handle.publish_feedback(feedback)
-                    time.sleep(0.005)
+                    time.sleep(0.05)
 
                 elif motion_type == "rotation":
                     M1_current_distance = (M1_encoder_current_count - M1_encoder_start_count) / counts_per_meter
@@ -228,13 +239,13 @@ class MoveToServerNode(Node):
                     # Feedback Update 
                     feedback.current_pos.x = 0.0
                     feedback.current_pos.y = 0.0
-                    feedback.current_theta = math.degrees(current_theta)
+                    feedback.current_pos.theta = math.degrees(current_theta)
                     feedback.current_m1_velocity = float(current_m1_velocity)
                     feedback.current_m2_velocity = float(current_m2_velocity)
                     feedback.m1_encoder_count = int(M1_encoder_current_count)
                     feedback.m2_encoder_count = int(M2_encoder_current_count)
                     goal_handle.publish_feedback(feedback)
-                    time.sleep(0.005)
+                    time.sleep(0.05)
 
         except Exception as e:
             self.stop_motors()
