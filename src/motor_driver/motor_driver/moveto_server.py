@@ -4,8 +4,9 @@ import math
 from rclpy.node import Node
 from rclpy.action import ActionServer, GoalResponse, CancelResponse
 from rclpy.action.server import ServerGoalHandle
+from rclpy.parameter import Parameter
 from wheelchair_interfaces.action import MoveTo
-from roboclaw_python.roboclaw_3 import Roboclaw
+from basicmicro import Basicmicro
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import ReentrantCallbackGroup
 import numpy as np
@@ -14,10 +15,33 @@ class MoveToServerNode(Node):
     def __init__(self):
         super().__init__("moveto_server")
         self.moveto_server = ActionServer(self,MoveTo,"moveto",goal_callback=self.goal_callback,execute_callback=self.execute_callback,cancel_callback=self.cancel_callback, callback_group=ReentrantCallbackGroup())
+        self.add_post_set_parameters_callback(self.parameters_callback)
         self.get_logger().info("MoveTo Server has started.")
 
+        # Declaring Parameters
+        self.declare_parameter("port", "/dev/ttyACM0")
+        self.declare_parameter("controller_address", 0x80)
+        self.declare_parameter("frequency", 20)
+        self.port = self.get_parameter("port").value
+        self.address = self.get_parameter("controller_address").value
+        self.frequency = self.get_parameter("frequency").value
+        self.delay_time = 1/self.frequency
+
+        # Initializing Controllers
+        self.controller = Basicmicro(self.port, 38400, timeout=0.5)
+        self.controller.Open()
+
+    def parameters_callback(self, params: list[Parameter]):
+        for param in params:
+            if param.name == "port":
+                self.port = param.value              
+            elif param.name == "controller_address":
+                self.address = param.value
+            elif param.name == "frequency":
+                self.frequency = param.value
+
     def stop_motors(self):
-        self.roboclaw.SpeedM1M2(self.address, 0, 0)
+        self.controller.SpeedM1M2(self.address, 0, 0)
     
     def goal_callback(self, goal_request: MoveTo.Goal):
         self.get_logger().info("Received Goal.")
@@ -32,11 +56,6 @@ class MoveToServerNode(Node):
     def execute_callback(self, goal_handle: ServerGoalHandle):
         result = MoveTo.Result()
         feedback = MoveTo.Feedback()
-
-        # Initializing Roboclaw
-        self.roboclaw = Roboclaw("/dev/ttyACM0", 38400, timeout=0.5)
-        self.address = 0x80
-        self.roboclaw.Open()
         
         # Initializing Variables
         goal = goal_handle.request
@@ -60,9 +79,9 @@ class MoveToServerNode(Node):
         deltaM2_count = 0
         counts_per_meter = (self.counts / self.wheel_circumference)
         meters_per_count = (self.wheel_circumference / self.counts)
-        self.get_logger().info(f'{self.roboclaw.ReadEncM1(self.address)}')
-        m1_encoder_read = self.roboclaw.ReadEncM1(self.address)
-        m2_encoder_read = self.roboclaw.ReadEncM2(self.address)
+        self.get_logger().info(f'{self.controller.ReadEncM1(self.address)}')
+        m1_encoder_read = self.controller.ReadEncM1(self.address)
+        m2_encoder_read = self.controller.ReadEncM2(self.address)
         if len(m1_encoder_read) !=3 or len(m2_encoder_read) != 3:
             goal_handle.abort()
             self.stop_motors()
@@ -164,7 +183,7 @@ class MoveToServerNode(Node):
             prevTime = startTime
             
             
-            self.roboclaw.SpeedM1M2(self.address,M1_speed_counts, M2_speed_counts)
+            self.controller.SpeedM1M2(self.address,M1_speed_counts, M2_speed_counts)
 
             while (abs(M1_encoder_target_count - M1_encoder_current_count) > tolerance or abs(M2_encoder_target_count - M2_encoder_current_count) > tolerance):                    # Update Position and Velocity
                 currentTime = time.perf_counter()
@@ -177,8 +196,8 @@ class MoveToServerNode(Node):
                     return failed_result(motion_type)
 
                 # Velocity Check 
-                m1_vel_status,current_m1_velocity,_ = self.roboclaw.ReadSpeedM1(self.address) 
-                m2_vel_status,current_m2_velocity,_ = self.roboclaw.ReadSpeedM2(self.address)
+                m1_vel_status,current_m1_velocity,_ = self.controller.ReadSpeedM1(self.address) 
+                m2_vel_status,current_m2_velocity,_ = self.controller.ReadSpeedM2(self.address)
 
                 if not (m1_vel_status or m2_vel_status):
                     self.stop_motors()
@@ -186,8 +205,8 @@ class MoveToServerNode(Node):
                     return failed_result(motion_type)
 
                 # Encoder Check
-                M1status, M1_encoder_current_count, _ = self.roboclaw.ReadEncM1(self.address)
-                M2status, M2_encoder_current_count, _ = self.roboclaw.ReadEncM2(self.address)
+                M1status, M1_encoder_current_count, _ = self.controller.ReadEncM1(self.address)
+                M2status, M2_encoder_current_count, _ = self.controller.ReadEncM2(self.address)
                 if not (M1status and M2status):
                     self.stop_motors()
                     goal_handle.abort()
@@ -229,7 +248,7 @@ class MoveToServerNode(Node):
                     feedback.m1_encoder_count = int(M1_encoder_current_count)
                     feedback.m2_encoder_count = int(M2_encoder_current_count)
                     goal_handle.publish_feedback(feedback)
-                    time.sleep(0.05)
+                    time.sleep(self.delay_time)
 
                 elif motion_type == "rotation":
                     M1_current_distance = (M1_encoder_current_count - M1_encoder_start_count) / counts_per_meter
@@ -245,7 +264,7 @@ class MoveToServerNode(Node):
                     feedback.m1_encoder_count = int(M1_encoder_current_count)
                     feedback.m2_encoder_count = int(M2_encoder_current_count)
                     goal_handle.publish_feedback(feedback)
-                    time.sleep(0.05)
+                    time.sleep(self.delay_time)
 
         except Exception as e:
             self.stop_motors()

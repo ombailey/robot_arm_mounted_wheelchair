@@ -1,6 +1,7 @@
 build/
 install/
 log/
+venv/
 *.log
 *.tmp
 *.swp
